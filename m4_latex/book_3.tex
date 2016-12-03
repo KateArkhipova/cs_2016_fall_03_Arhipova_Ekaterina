@@ -1,0 +1,280 @@
+\documentclass[a4paper]{article}
+
+%% Language and font encodings
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+
+%% Sets page size and margin
+
+%% Useful packages
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\setcounter{section}{1}
+\setcounter{subsection}{1}
+\setcounter{subsubsection}{0}
+
+\title{Your Paper}
+\author{You}
+%% Sets page size and margins 
+\usepackage[a4paper,top=1cm,bottom=1cm,left=4cm,right=3cm,marginparwidth=1cm]{geometry} 
+
+\begin {document}
+\subsection{\textit{Newtonian mechanics: Free fall}}\hfill {5}\\
+
+{\large One robust alternative is the method of dimensional analysis. But this
+tool requires that at least one quantity among $v$, $g$, and $h$ have dimensions.
+Otherwise, every candidate impact speed, no matter how absurd, equates
+dimensionless quantities and therefore has valid dimensions.
+\\
+
+Therefore, let’s restate the free-fall problem so that the quantities retain
+  their dimensions:}
+\\
+
+{\normalsize A ball initially at rest falls from a height $h$ and hits the ground at speed $v$.
+Find $v$ assuming a gravitational acceleration g and neglecting air resistance} 
+\\
+
+{\large The restatement is, first, shorter and crisper than the original phrasing:}
+\\
+
+{\normalsize A ball initially at rest falls from a height of $h$ feet and hits the ground at a
+speed of $v$ feet per second. Find v assuming a gravitational acceleration of $g$
+feet per second squared and neglecting air resistance.}
+\\
+
+{\large Second, the restatement is more general. It makes no assumption about
+the system of units, so it is useful even if meters, cubits, or furlongs are
+the unit of length. Most importantly, the restatement gives dimensions to
+$h$, $g$, and $v$. Their dimensions will almost uniquely determine the impact
+speed—without our needing to solve a differential equation.
+\\
+
+The dimensions of height $h$ are simply length or, for short, $L$. The dimensions           
+of gravitational acceleration $g$ are length per time squared or $LT^{−2}$,
+where T represents the dimension of time. A speed has dimensions of
+$LT^{−1}$, so $v$ is a function of g and h with dimensions of $LT^{−1}$.}
+\\
+
+\colorbox{lightgray}{
+\begin{minipage}{\textwidth}
+ {\normalsize\textbf{Problem 1.4 Dimensions of familiar quantities}
+
+In terms of the basic dimensions length $L$, mass $M$, and time $T$, what are the
+dimensions of energy, power, and torque?}
+\end{minipage}
+}
+\\
+
+$\Delta$\textit {What combination of $g$ and $h$ has dimensions of speed?}
+\\
+
+The combination $\sqrt{gh}$ has dimensions of speed.
+\\
+
+\begin{equation}
+(\underbrace{LT^{−2}}_{g}\times \underbrace{L}_{h})^{1/2}=\sqrt{L^2T^{-2}}=\underbrace{LT^{-1}}_{speed}
+\end{equation}
+\\
+
+$\Delta$ \textit {Is $\sqrt{gh}$ the only combination of g and h with dimensions of speed?}
+\\
+
+{\large In order to decide whether $\sqrt{gh}$ is the only possibility, use constraint
+propagation [43]. The strongest constraint is that the combination of $g$ and
+$h$, being a speed, should have dimensions of inverse time $(T^{−1})$. Because
+h contains no dimensions of time, it cannot help construct $T^{−1}$. Because}
+
+
+\newpage
+ \large\textbf{6} \hfill \textit{1 Dimensions} \\ 
+\vspace{0pt} 
+
+$g$ contains $T^{−2}$, the $T^{−1}$ must come from $\sqrt{g}$. The second constraint is
+that the combination contain $L^{1}$. The $\sqrt{g}$ already contributes $L^{1/2}$, so the
+missing $L^{1/2}$ must come from $\sqrt{h}$. The two constraints thereby determine
+uniquely how $g$ and $h$ appear in the impact speed $v$.
+\\
+
+The exact expression for $v$ is, however, not unique. It could be $\sqrt{gh}$,
+$\sqrt{2gh}$,
+or, in general, $\sqrt{gh}$×dimensionless constant. The idiom of multiplication
+by a dimensionless constant occurs frequently and deserves a compact
+notation akin to the equals sign:
+\\
+
+\begin{equation}
+\nu \sim \sqrt{gh} 
+\end{equation}
+\\
+
+Including this ∼ notation, we have several species of equality:
+\\
+
+$\alpha$ equality except perhaps for a factor with dimensions,
+
+$\sim$ equality except perhaps for a factor without dimensions,
+
+$\approx$ equality except perhaps for a factor close to 1.
+\\
+
+The exact impact speed is $\sqrt{2gh}$, so the dimensions result $\sqrt{gh}$ contains
+the entire functional dependence! It lacks only the dimensionless factor
+$\sqrt{2}$, and these factors are often unimportant. In this example, the height
+might vary from a few centimeters (a flea hopping) to a few meters (a cat
+jumping from a ledge). The factor-of-100 variation in height contributes
+a factor-of-10 variation in impact speed. Similarly, the gravitational acceleration
+might vary from 0.27 m $s^{-2}$ (on the asteroid Ceres) to 25 m $s^{-2}$ (on
+Jupiter). The factor-of-100 variation in $g$ contributes another factor-of-10
+variation in impact speed. Much variation in the impact speed, therefore,
+comes not from the dimensionless factor $\sqrt{2}$  but rather from the symbolic
+factors—which are computed exactly by dimensional analysis.
+\\
+
+Furthermore, not calculating the exact answer can be an advantage. Exact
+answers have all factors and terms, permitting less important information,
+such as the dimensionless factor $\sqrt{2}$, to obscure important information
+such as $\sqrt{gh}$. As William James advised, ‘‘The art of being wise is the art
+of knowing what to overlook’’
+[19, Chapter 22].
+\\
+
+\colorbox{lightgray}{
+\begin{minipage}{\textwidth}
+ {\normalsize\textbf{Problem 1.5 Vertical throw}
+ \\
+You throw a ball directly upward with speed $v0$. Use dimensional analysis to
+estimate how long the ball takes to return to your hand (neglecting air resistance).
+Then find the exact time by solving the free-fall differential equation. What
+dimensionless factor was missing from the dimensional-analysis result?}
+\end{minipage}
+}
+
+\newpage
+\subsection{\textit{Guessing integrals}}\hfill \textbf{7} \\ 
+\subsubsection{Guessing integrals}
+
+The analysis of free fall (Section 1.2) shows the value of not separating
+dimensioned quantities from their units. However, what if the quantities
+are dimensionless, such as the 5 and $x$ in the following Gaussian integral:
+\\
+
+\begin{equation}
+\int\limits_{-\infty}^{\infty} e^{-5x^2}\,dx?
+\end{equation}
+\\
+Alternatively, the dimensions might be unspecified—a common case in
+mathematics because it is a universal language. For example, probability
+theory uses the Gaussian integral
+\\
+
+\begin{equation}
+\int\limits_{x1}^{x2} e^{-x^2/2\sigma^2}\,dx,
+\end{equation}
+\\
+where $x$ could be height, detector error, or much else. Thermal physics
+uses the similar integral
+\\
+
+\begin{equation}
+\int e^{-1/2m\nu^2/kT}\,d\nu,
+\end{equation}
+\\
+where $v$ is a molecular speed. Mathematics, as the common language,
+studies their common form studies their $\int e^{-\alpha x^2}$ without specifying the dimensions of
+$\alpha$ and $x$. The lack of specificity gives mathematics its power of abstraction,
+but it makes using dimensional analysis difficult.
+\\
+
+$\Delta$\textit {How can dimensional analysis be applied without losing the benefits of mathematical
+abstraction?}
+\\
+
+The answer is to find the quantities with unspecified dimensions and then
+to assign them a consistent set of dimensions. To illustrate the approach,
+let’s apply it to the general definite Gaussian integral
+\\
+
+\begin{equation}
+\int\limits_{-\infty}^{\infty} e^{-\alpha x^2}\,dx.
+\end{equation}
+\\
+Unlike its specific cousin with $\alpha$ = 5, which is the integral $\int\limits_{-\infty}^{\infty} e^{-5x^2}$ the general form does not specify the dimensions of $x$ or $\alpha$—and that
+openness provides the freedom needed to use the method of dimensional
+analysis
+\\
+
+The method requires that any equation be dimensionally valid. Thus,
+in the following equation, the left and right sides must have identical
+dimensions:
+
+\newpage
+ \large\textbf{8} \hfill \textit{1 Dimensions} \\ 
+\vspace{0pt} 
+
+\begin{equation}
+\int\limits_{-\infty}^{\infty} e^{-\alpha x^2}\,dx=something
+\end{equation}
+\\
+
+$\Delta$\textit {Is the right side a function of $x$? Is it a function of $\alpha$? Does it contain a constant
+of integration?}
+\\
+
+The left side contains no symbolic quantities other than $x$ and $\alpha$. But
+$x$ is the integration variable and the integral is over a definite range, so
+$x$ disappears upon integration (and no constant of integration appears).
+Therefore, the right side—the ’’something‘‘
+—is a function only of $\alpha$. In
+symbols,
+\\
+
+\begin{equation}
+\int\limits_{-\infty}^{\infty} e^{-\alpha x^2}\,dx=f(\alpha)
+\end{equation}
+
+The function f might include dimensionless numbers such as 2/3 or $\sqrt{\pi}$,
+but $\alpha$ is its only input with dimensions.
+\\
+
+For the equation to be dimensionally valid, the integral must have the
+same dimensions as f($\alpha$), and the dimensions of f($\alpha$) depend on the
+dimensions of $\alpha$. Accordingly, the dimensional-analysis procedure has
+the following three steps:
+\\
+
+Step 1. Assign dimensions to $\alpha$ (Section 1.3.1).
+\\
+
+Step 2. Find the dimensions of the integral (Section 1.3.2).
+\\
+
+Step 3. Make an f($\alpha$) with those dimensions (Section 1.3.3).
+\\
+
+\subsubsection{Assigning dimensions to $\alpha$}
+
+The parameter $\alpha$ appears in an exponent. An exponent specifies how
+many times to multiply a quantity by itself. For example, here is $2^{n}$:
+\\
+
+\begin{equation}
+2^{n}=\underbrace{2 \times 2 \times... \times 2}_{n  terms}
+\end{equation}
+\\
+
+The notion of ’’how many times‘‘ is a pure number, so an exponent is
+dimensionless.
+\\
+
+Hence the exponent −$\alpha x^{2}$ in the Gaussian integral is dimensionless. For
+convenience, denote the dimensions of $\alpha$ by [$\alpha$] and of $x$ by [$x$]. Then
+\\
+\begin{equation}
+[\alpha][x^{2}]=1,
+\end{equation}
+
+\end{document}
