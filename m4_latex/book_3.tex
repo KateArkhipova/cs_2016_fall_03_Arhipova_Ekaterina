@@ -14,8 +14,9 @@
 \usepackage[colorlinks=true, allcolors=blue]{hyperref}
 \setcounter{section}{1}
 \setcounter{subsection}{1}
-\setcounter{subsubsection}{0}
-
+ \setcounter{subsubsection}{0}
+ \setcounter{equation}{2}
+\numberwithin{equation}{section}
 \title{Your Paper}
 \author{You}
 %% Sets page size and margins 
@@ -114,13 +115,15 @@ notation akin to the equals sign:
 Including this ∼ notation, we have several species of equality:
 \\
 
-$\alpha$ equality except perhaps for a factor with dimensions,
-
-$\sim$ equality except perhaps for a factor without dimensions,
-
-$\approx$ equality except perhaps for a factor close to 1.
-\\
-
+\begin{center}
+$\alpha$ \textrm{equality except perhaps for a factor with dimensions,}
+\end{center}
+\begin{eqnarray}
+\sim \textrm{equality except perhaps for a factor without dimensions,}
+\end{eqnarray}
+\begin{center}
+$\approx$ \textrm{equality except perhaps for a factor close to 1.}
+\end{center}
 The exact impact speed is $\sqrt{2gh}$, so the dimensions result $\sqrt{gh}$ contains
 the entire functional dependence! It lacks only the dimensionless factor
 $\sqrt{2}$, and these factors are often unimportant. In this example, the height
