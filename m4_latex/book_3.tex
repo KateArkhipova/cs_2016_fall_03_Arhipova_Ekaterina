@@ -14,17 +14,21 @@
 \usepackage[colorlinks=true, allcolors=blue]{hyperref}
 \setcounter{section}{1}
 \setcounter{subsection}{1}
- \setcounter{subsubsection}{0}
  \setcounter{equation}{2}
+ \setcounter{page}{5}
 \numberwithin{equation}{section}
+\usepackage{fancyhdr}
+
 \title{Your Paper}
 \author{You}
 %% Sets page size and margins 
 \usepackage[a4paper,top=1cm,bottom=1cm,left=4cm,right=3cm,marginparwidth=1cm]{geometry} 
 
-\begin {document}
-\subsection{\textit{Newtonian mechanics: Free fall}}\hfill {5}\\
 
+\begin {document}
+\pagestyle{empty}
+  \rhead{\thepage}
+\subsection{\textit{Newtonian mechanics: Free fall \hspace{6 cm} 5}}
 {\large One robust alternative is the method of dimensional analysis. But this
 tool requires that at least one quantity among $v$, $g$, and $h$ have dimensions.
 Otherwise, every candidate impact speed, no matter how absurd, equates
@@ -157,9 +161,8 @@ dimensionless factor was missing from the dimensional-analysis result?}
 }
 
 \newpage
-\subsection{\textit{Guessing integrals}}\hfill \textbf{7} \\ 
-\subsubsection{Guessing integrals}
-
+\subsection{\textit{Guessing integrals} \hspace{8.8 cm} 7}
+\subsection*{1.3\quad Guessing integrals}
 The analysis of free fall (Section 1.2) shows the value of not separating
 dimensioned quantities from their units. However, what if the quantities
 are dimensionless, such as the 5 and $x$ in the following Gaussian integral:
